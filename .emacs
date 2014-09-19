@@ -58,6 +58,7 @@
 (global-set-key "\M-r" 'revert-buffer-with-coding-system)
 
 (global-set-key "\C-cr" 'revert-all-buffers)
+(global-set-key "\C-ch" 'ff-find-other-file)
 
 ;; start the server so we can use emacsclient
 (server-start)
