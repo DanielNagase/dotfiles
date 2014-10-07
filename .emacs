@@ -95,10 +95,15 @@
 ;; ace-jump-buffer
 (define-key global-map (kbd "C-c j") 'ace-jump-buffer)
 
+;; smart-tabs
+(smart-tabs-insinuate 'c 'c++)
+
 ; set indendation for the common c mode
 (defun my-c-mode-common-hook ()
   ; set indentation level to 4 spaces
   (setq c-basic-offset 4)
+  (setq tab-width 4)
+  (setq indent-tabs-mode t)
   ; set the extra indentation before a substatement (e.g. the opening brace in
   ; the consequent block of an if statement) to 0 (instead of '+)
   (c-set-offset 'substatement-open 0))
