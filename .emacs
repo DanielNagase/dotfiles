@@ -63,6 +63,9 @@
 ;; start the server so we can use emacsclient
 (server-start)
 
+;; disable the tool bar
+(tool-bar-mode -1)
+
 ;; Always load a shell.
 ;; (shell)
 
