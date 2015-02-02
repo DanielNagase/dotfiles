@@ -73,6 +73,9 @@
 (prefer-coding-system 'utf-8-unix)
 ;; (set-buffer-process-coding-system 'utf-8 'utf-8)
 
+;; always use case-insensitive filename completion in the minibuffer
+(setq read-file-name-completion-ignore-case t)
+
 ;; things specific to AquaMacs on OS X
 
 ;; enable package management
