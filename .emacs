@@ -102,7 +102,7 @@
 (define-key global-map (kbd "C-c j") 'ace-jump-buffer)
 
 ;; smart-tabs
-(smart-tabs-insinuate 'c 'c++)
+(smart-tabs-insinuate 'c 'c++ 'python)
 
 ; set indendation for the common c mode
 (defun my-c-mode-common-hook ()
@@ -114,3 +114,9 @@
   ; the consequent block of an if statement) to 0 (instead of '+)
   (c-set-offset 'substatement-open 0))
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+; set indentation for python mode
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (setq indent-tabs-mode t)
+	    (setq tab-width 4)))
