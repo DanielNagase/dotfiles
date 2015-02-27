@@ -102,7 +102,8 @@
 (define-key global-map (kbd "C-c j") 'ace-jump-buffer)
 
 ;; smart-tabs
-(smart-tabs-insinuate 'c 'c++ 'python)
+(smart-tabs-insinuate 'c 'c++ 'python 'ruby)
+(setq-default indent-tabs-mode nil)
 
 ; set indendation for the common c mode
 (defun my-c-mode-common-hook ()
