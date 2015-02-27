@@ -105,6 +105,16 @@
 (smart-tabs-insinuate 'c 'c++ 'python 'ruby)
 (setq-default indent-tabs-mode nil)
 
+;; projectile
+(projectile-global-mode)
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
+
 ; set indendation for the common c mode
 (defun my-c-mode-common-hook ()
   ; set indentation level to 4 spaces
