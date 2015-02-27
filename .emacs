@@ -65,6 +65,7 @@
 
 ;; disable the tool bar
 (tool-bar-mode -1)
+(setq column-number-mode t)
 
 ;; Always load a shell.
 ;; (shell)
