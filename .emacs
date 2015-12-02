@@ -65,6 +65,7 @@
 
 ;; disable the tool bar
 (tool-bar-mode -1)
+(setq column-number-mode t)
 
 ;; Always load a shell.
 ;; (shell)
@@ -102,7 +103,18 @@
 (define-key global-map (kbd "C-c j") 'ace-jump-buffer)
 
 ;; smart-tabs
-(smart-tabs-insinuate 'c 'c++ 'python)
+(smart-tabs-insinuate 'c 'c++ 'python 'ruby)
+(setq-default indent-tabs-mode nil)
+
+;; projectile
+(projectile-global-mode)
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
 
 ; set indendation for the common c mode
 (defun my-c-mode-common-hook ()
