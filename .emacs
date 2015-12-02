@@ -120,3 +120,7 @@
 	  (lambda ()
 	    (setq indent-tabs-mode t)
 	    (setq tab-width 4)))
+
+;; don't add a comment with file encoding in ruby mode
+(add-hook 'ruby-mode-hook
+	  (setq ruby-insert-encoding-magic-comment nil))
