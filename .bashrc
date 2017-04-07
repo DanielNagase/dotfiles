@@ -1,4 +1,4 @@
-# bashrc file for shimabara
+# bashrc file
 
 # increase the size of the bash command history
 export HISTFILESIZE=10000
@@ -6,10 +6,6 @@ export HISTFILESIZE=10000
 # aliases
 alias la="ls -Al"
 alias ll="ls -l"
-alias mj="make -j"
-alias rr="rake run"
-alias rd="rake debug"
-alias rrl="rake run DEFINES=TEST_LAYOUT"
 
 # terminal colors
 # assume that we will be using a
@@ -25,15 +21,6 @@ export PS1="`EXT_COLOR 172`\u@`EXT_COLOR 171`\h:`EXT_COLOR 39`\w\$${NO_COLOR} "
 export PATH=/usr/local/bin:$PATH
 # emacs stuff
 export PATH="/Applications/Aquamacs.app/Contents/MacOS/bin:$PATH"
-
-# python stuff
-export PATH=/usr/local/share/python:$PATH
-export PATH="/usr/local/share/npm/bin:$PATH"
-
-export NODE_PATH='/usr/local/lib/node_modules'
-
-# haskell stuff
-export PATH="~/.cabal/bin":$PATH
 
 # ls colors!
 export LSCOLORS=excxxxxxfxxxxxxxxxxxxx
