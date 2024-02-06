@@ -1,3 +1,9 @@
+;; editorconfig
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
 ;; mode settings
 (setq default-major-mode 'text-mode)
 ;(add-hook 'text-mode-hook 'turn-on-auto-fill)
@@ -9,10 +15,8 @@
 ;; set fonts and colors
 (global-font-lock-mode t)
 
-;; (require 'color-theme)
-(color-theme-initialize)
-(require 'color-theme-gruber-darker)
-(color-theme-gruber-darker)
+(load-theme 'railscast t t)
+(enable-theme 'railscast)
 
 ;; markdown mode
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
@@ -80,11 +84,12 @@
 ;; things specific to AquaMacs on OS X
 
 ;; enable package management
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  )
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
 
 ;; c# highlighting
 (setq omnisharp-server-executable-path "/usr/bin/omnisharp")
@@ -92,9 +97,6 @@
 (add-hook 'csharp-mode-hook 'company-mode)
 (setq csharp-want-imenu nil)
 (local-set-key (kbd "{") 'csharp-insert-open-brace)
-
-;; highlighting for protobuf files
-(require 'protobuf-mode)
 
 ;; ace-jump-mode
 (require 'ace-jump-mode)
@@ -136,3 +138,16 @@
 ;; don't add a comment with file encoding in ruby mode
 (add-hook 'ruby-mode-hook
 	  (setq ruby-insert-encoding-magic-comment nil))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(use-package editorconfig smart-tabs-mode projectile flx-ido color-theme-modern ace-jump-mode)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
