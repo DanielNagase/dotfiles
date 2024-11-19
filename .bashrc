@@ -31,4 +31,4 @@ export EDITOR=emacsclient
 # bash autocompletion
 # case-insensitive autocomplete
 bind 'set completion-ignore-case on'
-export FIGNORE='.csproj:.unityproj'
+export FIGNORE='.csproj:.unityproj:.meta:~'
