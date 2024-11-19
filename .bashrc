@@ -27,6 +27,7 @@ export LSCOLORS=excxxxxxfxxxxxxxxxxxxx
 export export CLICOLOR=1
 
 export EDITOR=emacsclient
+export DISPLAY=:0.0
 
 # bash autocompletion
 # case-insensitive autocomplete
